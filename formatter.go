@@ -32,7 +32,7 @@ type Formatter interface {
 // avoid code duplication between the two default formatters.
 func prefixFieldClashes(data Fields) {
 	if t, ok := data["time"]; ok {
-		data["fields.time"] = t
+		data["fields"] = t
 	}
 
 	if m, ok := data["msg"]; ok {
